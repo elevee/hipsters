@@ -1,0 +1,29 @@
+%p#notice 
+  = notice
+
+%p
+  %strong Name:
+  = @hipster.name
+
+
+%p
+  %strong Favorite beer:
+  = @hipster.favorite_beer
+
+
+%p
+  %strong Irony rating:
+  = @hipster.irony_rating
+
+
+%p
+  %strong Moustache:
+  = @hipster.moustache
+
+
+
+= link_to 'Edit', edit_hipster_path(@hipster) 
+| 
+= link_to 'Destroy', hipsters_path 
+|
+= link_to 'Back', hipsters_path
