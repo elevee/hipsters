@@ -1,0 +1,23 @@
+%h1 Listing hipsters
+
+%table
+  %tr
+    %th Name
+    %th Favorite beer
+    %th Irony rating
+    %th Moustache
+    %th 
+    %th 
+    %th 
+
+  - @hipsters.each do |hipster|
+    %tr
+      %td= hipster.name
+      %td= hipster.favorite_beer 
+      %td= hipster.irony_rating 
+      %td= hipster.moustache 
+      %td= link_to 'Show', hipster 
+      %td= link_to 'Edit', edit_hipster_path(hipster) 
+      %td= link_to 'Destroy', hipster, method: :delete, data: { confirm: 'Are you sure?' } 
+
+= link_to 'New Hipster', new_hipster_path 

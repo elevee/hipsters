@@ -1,0 +1,24 @@
+= form_for(@hipster) do |f|
+  - if @hipster.errors.any? 
+    #error_explanation
+      %h2 = pluralize(@hipster.errors.count, "error")
+      prohibited this hipster from being saved:
+
+      %ul
+      - @hipster.errors.full_messages.each do |msg|
+        %li = msg
+
+  %div.field
+    =f.label :name
+    =f.text_field :name
+  %div.field
+    =f.label :favorite_beer
+    =f.text_field :favorite_beer
+  %div.field
+    =f.label :irony_rating
+    =f.number_field :irony_rating
+  %div.field
+    =f.label :moustache
+    =f.check_box :moustache
+  %div.actions
+    =f.submit
