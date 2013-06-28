@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  favorite_beer: MyString
+  irony_rating: 1
+  moustache: false
+
+two:
+  name: MyString
+  favorite_beer: MyString
+  irony_rating: 1
+  moustache: false
